@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 CC="gcc"
 CFLAGS="-Wall -Wpedantic -ggdb -std=c99"
