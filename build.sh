@@ -1,7 +1,7 @@
 #!/bin/sh
 
 CC="gcc"
-CFLAGS="-Wall -Wpedantic -ggdb -std=c99"
+CFLAGS="-Wall -Wpedantic -ggdb -std=c11"
 CDEFINES=""
 CINCLUDES=""
 CFILES="main.c"
