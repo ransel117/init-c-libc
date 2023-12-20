@@ -1,6 +1,6 @@
 #!/bin/sh
 
-EXEC="main"
+EXEC="${EXEC:=main}"
 
 echo "---------RUNNING---------"
 echo "./${EXEC}"
