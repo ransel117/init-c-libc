@@ -54,3 +54,6 @@ dkms.conf
 
 # Files/Folders you want to be ignored
 __*
+compile_commands.json
+compile_flags.txt
+.cache/
