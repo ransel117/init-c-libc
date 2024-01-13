@@ -9,7 +9,7 @@ exec      = main.exe
 
 rule build_rule
     command = $cc $cflags $cdefines $cincludes $cfiles $clibs -o $exec
-build build: build_rule 0
+build build: build_rule
 
 rule run_rule
     command = ./$exec
