@@ -1,0 +1,18 @@
+cc        = clang
+cflags    = -Wall -Wpedantic -ggdb -std=c11
+cdefines  =
+cincludes =
+cfiles    = main.c
+clibs     =
+
+exec      = main.exe
+
+rule build_rule
+    command = $cc $cflags $cdefines $cincludes $cfiles $clibs -o $exec
+build build: build_rule 0
+
+rule run_rule
+    command = ./$exec
+build run: run_rule || build
+
+default build
