@@ -57,3 +57,4 @@ __*
 compile_commands.json
 compile_flags.txt
 .cache/
+.ninja_log
