@@ -7,12 +7,24 @@ clibs     =
 
 exec      = main.exe
 
+#windows
+#shell     = cmd /c
+#unix
+#shell     = sh -c
+
+#dumb shit to make ninja -t compdb work
+build nothing: phony
+
 rule build_rule
     command = $cc $cflags $cdefines $cincludes $cfiles $clibs -o $exec
-build build: build_rule
+build build: build_rule nothing
+
+rule compdb_rule
+    command = $shell "ninja -t compdb > compile_commands.json"
+build compdb: compdb_rule
 
 rule run_rule
     command = ./$exec
-build run: run_rule || build
+build run: run_rule
 
 default build
