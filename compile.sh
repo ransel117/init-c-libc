@@ -1,3 +1,5 @@
+#!/bin/sh
+
 CC="${CC:=clang}"
 CFLAGS="${CFLAGS:=-Wall -Wpedantic -ggdb -std=c11}"
 CDEFINES="${CDEFINES:=}"
